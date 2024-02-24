@@ -63,8 +63,7 @@ async def asyncio_subprocess_main_single_func():
     print(stdout.decode(), stderr.decode())
 
 async def asyncio_subprocess_main_multiple_func_using_communicate():
-    #cmd = f"adb -s {self.companion['host']['adb_id']} shell \"logcat -b all | grep '{mwa_search_strings[0]}' | grep '{mwa_search_strings[1]}'\""
-
+    
     start_time = time.time()
     print(f"start_time: {start_time}")
     cmd  = "ping -c 3 google.com"
