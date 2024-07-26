@@ -118,7 +118,7 @@ async def asyncssh_example():
     start_time = time.time()
     print(f"{start_time}")
     p1 = asyncio.create_task(asyncssh_func("ping -c 10 google.com"))
-    p2 = asyncio.create_task(asyncssh_func("ping -c 5 google.com"))
+    p2 = asyncio.create_task(asyncssh_func("ping -c 10 google.com"))
     out1 = await p1
     out2 = await p2
     print(f"{out1}, {out2}")
@@ -161,8 +161,8 @@ def test_asyncio_subprocess_commands():
     # asyncio.run(asyncio_subprocess_main_multiple_func_using_communicate())
     # asyncio.run(asyncio_subprocess_main_multiple_func_using_gather())
     # asyncio.run(asyncio_subprocess_kill_in_between())
-    # asyncio.run(asyncssh_example())
-    asyncio.run(simultaneous_ping_and_get_time_in_real_time())
+    asyncio.run(asyncssh_example())
+    # asyncio.run(simultaneous_ping_and_get_time_in_real_time())
 
 
 

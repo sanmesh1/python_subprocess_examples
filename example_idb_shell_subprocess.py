@@ -14,7 +14,8 @@ from typing import Tuple, TextIO
 import asyncio
 from datetime import datetime
 
-ios_dut_uuid = "0DF45C42-111B-416F-9A8E-48EE2B617EED"
+# ios_dut_uuid = "0DF45C42-111B-416F-9A8E-48EE2B617EED"
+ios_dut_uuid = "00008101-001C302E1143001E"
 folder_to_save_outputs = os.path.join(os.getcwd(), "ios_outputs")
 
 def get_current_date_time():
@@ -77,5 +78,5 @@ async def test_get_screenshot_from_ios_device(ios_dut_uuid: str, folder_to_save_
 
 if __name__ == "__main__":
     # asyncio.run( test_get_screenshot_from_ios_device(ios_dut_uuid, folder_to_save_outputs) )
-    asyncio.run( test_get_idb_log_for_duration(ios_dut_uuid, folder_to_save_outputs, 5) )
+    asyncio.run( test_get_idb_log_for_duration(ios_dut_uuid, folder_to_save_outputs, 20) )
 
